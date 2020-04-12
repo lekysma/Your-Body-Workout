@@ -9,6 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    //a variable that stores the id of the segue
+    var segueIdentifier: String = "toWorkout"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,5 +19,8 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func tapToWorkoutButton(_ sender: UIButton) {
+        performSegue(withIdentifier: segueIdentifier, sender: self)
+    }
 }
 
